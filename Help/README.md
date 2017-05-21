@@ -2,8 +2,8 @@
 github中创建自己的cocoapod私有库
 依托github服务器，把自己写的功能类项目当作cocoapods私有库进行发布公开，便于他人利用，也便于自己使用和维护。
 
-![github](https://github.com/)
-![cocoapods](https://guides.cocoapods.org/syntax/podspec.html)
+[github](https://github.com/)
+[cocoapods](https://guides.cocoapods.org/syntax/podspec.html)
 
 
 # 注意事项：
@@ -22,30 +22,81 @@ github中创建自己的cocoapod私有库
 
  * 2、（终端操作）创建本地目录，便于操作
   * （1）进入本地目录：cd 目录名称
-  * （2）使用命令clone项目到本地目录：git clone https://github.com/userName/projectName.git
-  * （3）添加到仓库：pod repo add projectName https://github.com/userName/projectName.git
-移除仓库：pod repo remove projectName
-更新仓库：pod repo update projectName
+  * （2）使用命令clone项目到本地目录：
+~~~ javascript
+git clone https://github.com/userName/projectName.git
+~~~
+  * （3）添加到仓库：
+~~~ javascript
+pod repo add projectName https://github.com/userName/projectName.git
+~~~ 
+移除仓库：
+~~~ javascript
+pod repo remove projectName
+~~~ 
+更新仓库：
+~~~ javascript
+pod repo update projectName
+~~~ 
  * 3、操作podspec文件
-  * （1）创建podspec文件：pod spec create projectName
+  * （1）创建podspec文件：
+~~~ javascript
+pod spec create projectName
+~~~ 
   * （2）编辑podspec文件
   * （3）检验podspec文件：
-本地校验文件：pod lib lint
-联网校验文件：pod spec lint
-选项：—verbose显示详细编译信息，—allow-warnings忽略警告，—sources编译时用到的源码地址，—use-libraries编译时加载依赖的其他静态库。如pod spec lint —verbose
+本地校验文件：
+~~~ javascript
+pod lib lint
+~~~ 
+联网校验文件：
+~~~ javascript
+pod spec lint
+~~~ 
+选项：—verbose显示详细编译信息，—allow-warnings忽略警告，—sources编译时用到的源码地址，—use-libraries编译时加载依赖的其他静态库。如
+~~~ javascript
+pod spec lint —verbose
+~~~ 
  * 4、修改文件提交
-  * （1）提交到git缓存区：git add .
-  * （2）提交备注说明：git commit -m “备注说明”
-  * （3）提交到git服务器：git push origin master
+  * （1）提交到git缓存区：
+~~~ javascript
+git add .
+~~~ 
+  * （2）提交备注说明：
+~~~ javascript
+git commit -m “备注说明”
+~~~ 
+  * （3）提交到git服务器：
+~~~ javascript
+git push origin master
+~~~ 
  * 5、设置tag
-  * （1）设置版本号：git tag x.x.x -m “version x.x.x”
-  * （2）提交到git服务器：git push origin master —tags
+  * （1）设置版本号：
+~~~ javascript
+git tag x.x.x -m “version x.x.x”
+~~~ 
+  * （2）提交到git服务器：
+~~~ javascript
+git push origin master —tags
+~~~ 
  * 6、发布私有库
-  * （1）首次时需要注册：pod trunk register emailName@xxx.com “userName” —description=“iMac” —verbose
+  * （1）首次时需要注册：
+~~~ javascript
+pod trunk register emailName@xxx.com “userName” —description=“iMac” —verbose
+~~~ 
   * （2）查看邮箱，并验证
-  * （3）查看注册状态：pod trunk me
-  * （4）发布到git服务器：pod trunk push projectName.podspec
-  * （5）验证发布状态：pod search projectName
+  * （3）查看注册状态：
+~~~ javascript
+pod trunk me
+~~~ 
+  * （4）发布到git服务器：
+~~~ javascript
+pod trunk push projectName.podspec
+~~~ 
+  * （5）验证发布状态：
+~~~ javascript
+pod search projectName
+~~~ 
 
 ![1.png](./1.png)
 ![2.png](./2.png)
