@@ -77,7 +77,7 @@ git tag x.x.x -m “version x.x.x”
 ~~~ 
   * （2）提交到git服务器：
 ~~~ javascript
-git push origin master —tags
+git push origin master --tags
 ~~~ 
  * 6、发布私有库
   * （1）首次时需要注册：
