@@ -92,6 +92,9 @@ pod trunk me
   * （4）发布到git服务器：
 ~~~ javascript
 pod trunk push projectName.podspec
+
+// 提交到repo
+pod repo push projectName projectName.podspec
 ~~~ 
   * （5）验证发布状态：
 ~~~ javascript
@@ -276,8 +279,7 @@ end
 （2）查看邮箱验证
 （3）查看命令：pod trunk me
 
-### [!] The validator for Swift projects uses Swift 3.0 by default, if you are using a different version of swift you can use a `.swift-version` file to set the version for your Pod. For example to use Swift 2.3, run: 
-`echo "2.3" > .swift-version`.
+### [!] The validator for Swift projects uses Swift 3.0 by default, if you are using a different version of swift you can use a `.swift-version` file to set the version for your Pod. For example to use Swift 2.3, run: `echo "2.3" > .swift-version`.
 解决：echo "3.0" > .swift-version
 
 ### [!] Unable to find a pod with name, author, summary, or description matching `CocoapodSpecDemo`
