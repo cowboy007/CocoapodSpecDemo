@@ -104,6 +104,7 @@ pod search projectName
 ![1.png](./1.png)
 ![2.png](./2.png)
 ![3.png](./3.png)
+![4.png](./4.png)
 
 # projectName.podspec文件内容编辑：
 ~~~ javascript
